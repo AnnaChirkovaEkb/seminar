@@ -23,5 +23,6 @@
 [1]: https://docs.microsoft.com/ru-ru/contribute/markdown-reference
 </code>
 
-
+<code>![Конец](1.png)
+</code>
 
