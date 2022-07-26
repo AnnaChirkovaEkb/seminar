@@ -17,3 +17,13 @@
 > **git checkout master** – вернуться к актуальному состоянию и продолжить работу;
 
 > **git diff** – увидеть разницу между текущим файлом и закоммиченным файлом;
+
+<code>Более подробно можно узнать [здесь][1].
+
+[1]: https://docs.microsoft.com/ru-ru/contribute/markdown-reference
+</code>
+
+
+<code>![Конец](1.png)
+</code>
+
