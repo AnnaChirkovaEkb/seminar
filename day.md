@@ -36,10 +36,8 @@
 
 + git branch -d <название ветки> – удалить ветку;
 
-<<<<<<< HEAD
 + git merge --abort - отменить merge;
 
-
-=======
 +  git log --graph – вывести коммиты в древовидной форме;
->>>>>>> graph_info
+
++ git checkout -b branch_name – создать ветку и перейти в нее;
