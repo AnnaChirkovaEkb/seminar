@@ -3,7 +3,7 @@
     string [] newArray = new string [size];
     for (int i = 0; i < newArray.Length; i++)
     {
-        Console.Write ($"Введите {i+1} значение массива: ");
+        Console.Write ($"Input {i+1} datas: ");
         newArray[i] = Console.ReadLine();        
     }
     return newArray;
@@ -33,7 +33,7 @@ string [] array = CreateStringArray(size);
 Console.WriteLine("Input simvols: "); 
 ShowArray(array);
 
-Console.WriteLine("Значения символов в массиве, длина которых < или = 3 :");
+Console.WriteLine("Elements in datas, which < or = 3 :");
 ThreeSimvolosArray(array);
 
 Console.WriteLine();
