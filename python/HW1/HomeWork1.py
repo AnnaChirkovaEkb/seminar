@@ -45,5 +45,20 @@ print("????????????????")
 # else:
 #     print ("4")
 
-4. Напишите программу, которая по заданному номеру четверти, 
-показывает диапазон возможных координат точек в этой четверти (x и y).
+# 4. Напишите программу, которая по заданному номеру четверти, 
+# показывает диапазон возможных координат точек в этой четверти (x и y).
+
+print ("Input quarter for point")
+a=int (input())
+
+if a==1:
+    print ("Diapozone coorditate of point x (0;+...) and y (0;+...)")
+elif a==2:
+    print ("Diapozone coorditate of point x (-...;0) and y (0;+...)")
+elif a==3:
+    print ("Diapozone coorditate of point x (-...;0) and y (-...;0)")
+elif a==4:
+    print ("Diapozone coorditate of point x (0;+...) and y (-...;0)")
+else:
+     print ("Error")
+
