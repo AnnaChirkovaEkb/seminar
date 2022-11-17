@@ -48,17 +48,34 @@ print("????????????????")
 # 4. Напишите программу, которая по заданному номеру четверти, 
 # показывает диапазон возможных координат точек в этой четверти (x и y).
 
-print ("Input quarter for point")
-a=int (input())
+# print ("Input quarter for point")
+# a=int (input())
 
-if a==1:
-    print ("Diapozone coorditate of point x (0;+...) and y (0;+...)")
-elif a==2:
-    print ("Diapozone coorditate of point x (-...;0) and y (0;+...)")
-elif a==3:
-    print ("Diapozone coorditate of point x (-...;0) and y (-...;0)")
-elif a==4:
-    print ("Diapozone coorditate of point x (0;+...) and y (-...;0)")
-else:
-     print ("Error")
+# if a==1:
+#     print ("Diapozone coorditate of point x (0;+...) and y (0;+...)")
+# elif a==2:
+#     print ("Diapozone coorditate of point x (-...;0) and y (0;+...)")
+# elif a==3:
+#     print ("Diapozone coorditate of point x (-...;0) and y (-...;0)")
+# elif a==4:
+#     print ("Diapozone coorditate of point x (0;+...) and y (-...;0)")
+# else:
+#      print ("Error")
 
+# 5. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние 
+# между ними в 2D пространстве.
+
+# Пример:
+
+# - A (3,6); B (2,1) -> 5,09
+# - A (7,-5); B (1,-1) -> 7,21
+
+print ("Input coorditate of first point X1")
+x1=float (input())
+print ("Input coorditate of first point Y1")
+y1=float (input())
+
+print ("Input coorditate of second point X2")
+x2=float (input())
+print ("Input coorditate of second point Y2")
+y2=float (input())
