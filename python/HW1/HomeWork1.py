@@ -21,7 +21,7 @@
 
 print("????????????????")
 
-# Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и 
+# 3.Напишите программу, которая принимает на вход координаты точки (X и Y), причём X ≠ 0 и Y ≠ 0 и 
 # выдаёт номер четверти плоскости, в которой находится эта точка (или на какой оси она находится).
 
 # Пример:
@@ -30,18 +30,20 @@ print("????????????????")
 # - x=2; y=4-> 1
 # - x=-34; y=-30 -> 3
 
-print ("Input coorditate if point X")
-x=float (input())
-print ("Input coorditate if point Y")
-y=float (input())
+# print ("Input coorditate if point X")
+# x=float (input())
+# print ("Input coorditate if point Y")
+# y=float (input())
 
-print ("The point is in quarter number")
-if x>0 and y>0:
-    print ("1")
-elif x<0 and y>0:
-    print ("2")
-elif x<0 and y<0:
-    print ("3")    
-else:
-    print ("4")
+# print ("The point is in quarter number")
+# if x>0 and y>0:
+#     print ("1")
+# elif x<0 and y>0:
+#     print ("2")
+# elif x<0 and y<0:
+#     print ("3")    
+# else:
+#     print ("4")
 
+4. Напишите программу, которая по заданному номеру четверти, 
+показывает диапазон возможных координат точек в этой четверти (x и y).
