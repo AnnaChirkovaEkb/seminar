@@ -1,5 +1,7 @@
+
+
 # print ("a")
-# Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+# 1. Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
 
 # Пример:
 
@@ -16,8 +18,26 @@
 # else:
 #     print ("weekend")
 
-# Напишите программу для. проверки истинности утверждения 
+# 2. Напишите программу для. проверки истинности утверждения 
 # ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
+
+
+print ("Input X")
+x=float (input())
+print ("Input Y")
+y=float (input())
+print ("Input Z")
+z=float (input())
+
+a= not(x or y or z)
+b=not x and not y and not z
+
+if a==b:
+    print ("It is true")
+else:
+    print ("Fals")
+
+
 
 print("????????????????")
 
@@ -70,12 +90,15 @@ print("????????????????")
 # - A (3,6); B (2,1) -> 5,09
 # - A (7,-5); B (1,-1) -> 7,21
 
-print ("Input coorditate of first point X1")
-x1=float (input())
-print ("Input coorditate of first point Y1")
-y1=float (input())
+# print ("Input coorditate of first point X1")
+# x1=float (input())
+# print ("Input coorditate of first point Y1")
+# y1=float (input())
 
-print ("Input coorditate of second point X2")
-x2=float (input())
-print ("Input coorditate of second point Y2")
-y2=float (input())
+# print ("Input coorditate of second point X2")
+# x2=float (input())
+# print ("Input coorditate of second point Y2")
+# y2=float (input())
+
+# hypot=((x1 - x2) ** 2 + (y1 - y2) ** 2)**(0.5)
+# print (hypot)
