@@ -22,20 +22,17 @@
 # ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
 
-print ("Input X")
-x=float (input())
-print ("Input Y")
-y=float (input())
-print ("Input Z")
-z=float (input())
+print ('X Y Z')
+for x  [False,True]:
+    for y in [False,True]:
+        for z in [False,True]:
+            print(x, y, z)
+            if not (x or y or z) ==(not x) and (not y) and (not z):
+                print("It is TRUE")
+            else:
+                print("It is FALSE")
 
-a= not(x or y or z)
-b=not x and not y and not z
 
-if a==b:
-    print ("It is true")
-else:
-    print ("Fals")
 
 
 
