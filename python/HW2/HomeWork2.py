@@ -43,13 +43,13 @@
 
 # 3. Задайте список из n чисел последовательности (1+1/n)**n и выведите на экран их сумму.
 
-print ("Input number ")
-n = int(input())
-lst = [round((1+1/a)**a, 3) for a in range(1, n+1)]
-
-
-print(f'Sequence is: {lst}')
-print(f'Summa is: {round(sum(lst), 3)}')
+# print ("Input number ")
+# n = int(input())
+# lst = [round((1+1/a)**a, 3) for a in range(1, n+1)]
+#
+#
+# print(f'Sequence is: {lst}')
+# print(f'Summa is: {round(sum(lst), 3)}')
 
 
 # 4. (ЕСЛИ НЕ ЗНАЕТЕ КАК ДЕЛАТЬ, МОЖНО НЕ ВЫПОЛНЯТЬ)
@@ -59,4 +59,13 @@ print(f'Summa is: {round(sum(lst), 3)}')
 
 
 #5. Реализуйте алгоритм перемешивания списка.
+import random
 
+arr = [1, 2, 3, 4, 5, 6]
+n = len(arr)
+print (f'Old array {arr}')
+for i in range(n):
+    j = random.randint(0, n-1)
+    a=arr.pop(j)
+    arr.append(a)
+print(f'New array {arr}')
