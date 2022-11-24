@@ -44,43 +44,48 @@
 # Пример:
 #
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
-# была идея с разницей массивов, но не получилось
-list1=[1.1, 1.2, 3.1, 5, 10.01]
-list2=[]
-for i in range(0, len(list1)):
-    list2.append(round(list1[i]*100))
-    i+=1
-list3=[]
-for j in range(0, len(list2)):
-    if list2[j]%100==0:
-        j+=1
-    elif list2[j] > 99:
-        list3.append(round(list2[j]) % 100)
-        j += 1
-    else:
-        list3.append(round(list2[j]))
-        j += 1
-print(list1)
-print(list2)
-print(list3)
-print(f'Different in fractional part is {max(list3)-min(list3)}')
+# # была идея с разницей массивов, но не получилось, как элемент вычислить и  перевести в число
+# и как избежать 0
 
-
-
-
-
-
-
-
+# list1=[1.1, 1.2, 3.1, 5, 10.01]
+# list2=[]
+# for i in range(0, len(list1)):
+#     list2.append(round(list1[i]*100))
+#     i+=1
+# list3=[]
+# for j in range(0, len(list2)):
+#     if list2[j]%100==0:
+#         j+=1
+#     elif list2[j] > 99:
+#         list3.append(round(list2[j]) % 100)
+#         j += 1
+#     else:
+#         list3.append(round(list2[j]))
+#         j += 1
+# print(list1)
+# print(list2)
+# print(list3)
+# print(f'Different in fractional part is {max(list3)-min(list3)}')
 
 
 # 4. Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 #
-
 # Пример:
 #
 # - 45 -> 101101
 # - 3 -> 11
+
+# print ("Input number ")
+# n = int(input())
+# num =''
+# while n> 0:
+#     num= str(n % 2) +num
+#     n = n // 2
+# print(num)
+
+
+
+
 # 5. Задайте число. Составьте список чисел Фибоначчи, в том числе для отрицательных индексов.
 #
 # Пример:
