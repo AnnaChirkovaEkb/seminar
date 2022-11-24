@@ -57,15 +57,31 @@
 # Найдите произведение элементов на указанных позициях.
 # Позиции хранятся в файле file.txt в одной строке одно число.
 
+print ("Input quantity in list ")
+n = int (input())
+a=[]
+x=-n
+for i in range(x,n+1):
+    a.append(i)
+print(a)
+# with open('help.txt','r') as data:
+#     data.writelines("line1")
+data=open('help.txt','r')
+data.writelines(lines=2)
+
+
+
+
+
 
 #5. Реализуйте алгоритм перемешивания списка.
 import random
 
-arr = [1, 2, 3, 4, 5, 6]
-n = len(arr)
-print (f'Old array {arr}')
-for i in range(n):
-    j = random.randint(0, n-1)
-    a=arr.pop(j)
-    arr.append(a)
-print(f'New array {arr}')
+# arr = [1, 2, 3, 4, 5, 6]
+# n = len(arr)
+# print (f'Old array is {arr}')
+# for i in range(n):
+#     j = random.randint(0, n-1)
+#     a=arr.pop(j)
+#     arr.append(a)
+# print(f'New array is {arr}')
