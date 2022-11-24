@@ -64,18 +64,26 @@ x=-n
 for i in range(x,n+1):
     a.append(i)
 print(a)
-# with open('help.txt','r') as data:
-#     data.writelines("line1")
-data=open('help.txt','r')
-data.writelines(lines=2)
 
 
+f = open('help.txt', 'r')
+print('Position:')
+print(f.read())
+f.close()
 
-
+f = open('help.txt', 'r')
+b=f.read(1)
+c=f.read(2)
+# print(type(int(b)))
+# print(b)
+# print(f'{a[int(b)]} and * {a[int(c)]}')
+e=a[int(b)]*a[int(c)]
+print(f'The product of elementse will be {e}')
+f.close()
 
 
 #5. Реализуйте алгоритм перемешивания списка.
-import random
+# import random
 
 # arr = [1, 2, 3, 4, 5, 6]
 # n = len(arr)
