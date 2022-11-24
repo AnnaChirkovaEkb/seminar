@@ -25,18 +25,18 @@
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
 
-list1=[2,3,4,5,6,]
-list2=[]
-for i in range(0, len(list1)):
-    if i in range(0, len(list1)//2):
-        list2.append(list1[i]*list1[len(list1)-1-i])
-        i+=1
-    elif len(list1)%2>0:
-        if i in range(0, len(list1) // 2+1):
-            list2.append(list1[i] * list1[len(list1) - 1 - i])
-            i += 1
-
-print(list2)
+# list1=[2,3,4,5,6]
+# list2=[]
+# for i in range(0, len(list1)):
+#     if i in range(0, len(list1)//2):
+#         list2.append(list1[i]*list1[len(list1)-1-i])
+#         i+=1
+#     elif len(list1)%2>0:
+#         if i in range(0, len(list1) // 2+1):
+#             list2.append(list1[i] * list1[len(list1) - 1 - i])
+#             i += 1
+#
+# print(list2)
 
 # 3. Задайте список из вещественных чисел. Напишите программу, которая найдёт разницу между максимальным и
 # минимальным значением дробной части элементов.
@@ -44,8 +44,39 @@ print(list2)
 # Пример:
 #
 # - [1.1, 1.2, 3.1, 5, 10.01] => 0.19
+# была идея с разницей массивов, но не получилось
+list1=[1.1, 1.2, 3.1, 5, 10.01]
+list2=[]
+for i in range(0, len(list1)):
+    list2.append(round(list1[i]*100))
+    i+=1
+list3=[]
+for j in range(0, len(list2)):
+    if list2[j]%100==0:
+        j+=1
+    elif list2[j] > 99:
+        list3.append(round(list2[j]) % 100)
+        j += 1
+    else:
+        list3.append(round(list2[j]))
+        j += 1
+print(list1)
+print(list2)
+print(list3)
+print(f'Different in fractional part is {max(list3)-min(list3)}')
+
+
+
+
+
+
+
+
+
+
 # 4. Напишите программу, которая будет преобразовывать десятичное число в двоичное.
 #
+
 # Пример:
 #
 # - 45 -> 101101
