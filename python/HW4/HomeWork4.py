@@ -82,14 +82,75 @@ def simple_number(n: int):
 # print(f'{source_list} ->')
 # print(list)
 
-# 4. Задана натуральная степень k. Сформировать случайным образом список коэффициентов (значения от 0 до 100)
+# 4. Задана натуральная степень k. Сформировать случайным образом список коэффициентов
+# (значения от 0 до 100)
 # многочлена и записать в файл многочлен степени k.
 #
 # Пример:
 #
 # - k=2 => 2*x² + 4*x + 5 = 0 или x² + 5 = 0 или 10*x² = 0
 
-
+# import random
+#
+#
+# def write_file(st):
+#     with open('num4.txt', 'a') as data:
+#         data.write(st)
+#
+#
+# def rnd():
+#     return random.randint(0, 101)
+#
+#
+# def create_mn(k):
+#     lst = [rnd() for i in range(k + 1)]
+#     return lst
+#
+#
+# def create_str(sp):
+#     lst = sp[::-1]
+#     wr = ''
+#     if len(lst) < 1:
+#         wr = 'x = 0'
+#     else:
+#         for i in range(len(lst)):
+#             if i != len(lst) - 1 and lst[i] != 0 and i != len(lst) - 2:
+#                 wr += f'{lst[i]}x^{len(lst) - i - 1}'
+#                 if lst[i + 1] != 0:
+#                     wr += ' + '
+#             elif i == len(lst) - 2 and lst[i] != 0:
+#                 wr += f'{lst[i]}x'
+#                 if lst[i + 1] != 0:
+#                     wr += ' + '
+#             elif i == len(lst) - 1 and lst[i] != 0:
+#                 wr += f'{lst[i]} = 0'
+#             elif i == len(lst) - 1 and lst[i] == 0:
+#                 wr += ' = 0'
+#     return wr
+#
+#
+# k = int(input("Введите натуральную степень k = "))
+# koe = create_mn(k)
+# write_file(create_str(koe))
 
 # 5. Даны два файла, в каждом из которых находится запись многочлена. Задача - сформировать файл,
 # содержащий сумму многочленов.
+
+with open('num5_1.txt', 'r') as data:
+    st1 = data.readlines()
+with open('num5_2.txt', 'r') as data:
+    st2 = data.readlines()
+print(f"Первый многочлен {st1}")
+print(f"Второй многочлен {st2}")
+lst1 = [st1]
+lst2 = [st2]
+
+lst_new = [lst1[i]+lst2[i] for i in range(len(lst2))]
+# print (lst_new)
+st3=str(lst_new)
+
+with open('num5_3.txt', 'w') as data:
+    data.write(st3)
+with open('num5_3.txt', 'r') as data:
+    st4 = data.readlines()
+print(f"Результирующий многочлен {st4}")
