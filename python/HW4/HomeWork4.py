@@ -150,7 +150,7 @@ lst_new = [lst1[i]+lst2[i] for i in range(len(lst2))]
 st3=str(lst_new)
 
 with open('num5_3.txt', 'w') as data:
-    data.write(st3)
+    data.writelines(st3)
 with open('num5_3.txt', 'r') as data:
     st4 = data.readlines()
 print(f"Результирующий многочлен {st4}")
