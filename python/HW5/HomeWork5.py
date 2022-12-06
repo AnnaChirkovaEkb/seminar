@@ -19,52 +19,141 @@ import random
 #
 # b) Подумайте как наделить бота ""интеллектом""
 
+# вариант А
+# print('Game')
+# sum_konf=50
+# print(sum_konf)
+#
+# game_over = False
+# while game_over == False:
+#     print('Ходит первый игрок А')
+#     print('Сколько конфет вы берете?')
+#     a=int(input())
+#     if a>sum_konf:
+#         print('Error!Выберете другой ход')
+#     if 0>a>28:
+#         print('Error!Выберете другой ход c 1 до 28!')
+#     else:
+#         sum_konf = sum_konf - a
+#
+#     print(f'Остаток конфет {sum_konf}')
+#
+#     # !!!блок повторяется два раза
+#     if sum_konf == 0:
+#         game_over = True
+#         print('Победил игрок A!')
+#     else:
+#         game_over = False
+#
+#     while game_over == False:
+#         print('Ходит второй игрок B')
+#         b=random.randint(1,28)
+#         print(b)
+#         if a>sum_konf:
+#             print('Error!Выберете другой ход:')
+#             b = random.randint(1,sum_konf)
+#             sum_konf = sum_konf - b
+#             print(b)
+#         else:
+#             sum_konf = sum_konf - b
+#         print(f'Остаток конфет {sum_konf}')
+#
+#         if sum_konf == 0:
+#             game_over = True
+#             print('Победил игрок B!')
+#         else:
+#             game_over = False
 
-print('Game')
-sum_konf=50
-print(sum_konf)
+#вариант Б
 
-game_over = False
-while game_over == False:
-    print('Ходит первый игрок А')
-    print('Сколько конфет вы берете?')
-    a=int(input())
-    if a>sum_konf:
-        print('Error!Выберете другой ход')
-    if 0>a>28:
-        print('Error!Выберете другой ход c 1 до 28!')
-    else:
-        sum_konf = sum_konf - a
-
-    print(f'Остаток конфет {sum_konf}')
-
-    # !!!блок повторяется два раза
-    if sum_konf == 0:
-        game_over = True
-        print('Победил игрок A!')
-    else:
-        game_over = False
-
-    while game_over == False:
-        print('Ходит второй игрок B')
-        b=random.randint(1,28)
-        print(b)
-        if a>sum_konf:
-            print('Error!Выберете другой ход:')
-            b = random.randint(1,sum_konf)
-            sum_konf = sum_konf - b
-            print(b)
-        else:
-            sum_konf = sum_konf - b
-        print(f'Остаток конфет {sum_konf}')
-
-        if sum_konf == 0:
-            game_over = True
-            print('Победил игрок B!')
-        else:
-            game_over = False
-
-
+#
+# print('Game')
+# sum_konf=50
+# print(sum_konf)
+#
+# varion=random.randint(1,2)
+# print(varion)
+#
+# if varion==1:
+#     game_over = False
+#     while game_over == False:
+#         print('Ходит первый игрок А')
+#         print('Сколько конфет вы берете?')
+#         a=int(input())
+#         if a>sum_konf:
+#             print('Error!Выберете другой ход')
+#         if 0>a>28:
+#             print('Error!Выберете другой ход c 1 до 28!')
+#         else:
+#             sum_konf = sum_konf - a
+#
+#         print(f'Остаток конфет {sum_konf}')
+#
+#         # !!!блок повторяется два раза
+#         if sum_konf == 0:
+#             game_over = True
+#             print('Победил игрок A!')
+#         else:
+#             game_over = False
+#
+#         while game_over == False:
+#             print('Ходит второй игрок B')
+#             b=(sum_konf%28)+1
+#             print(b)
+#             if b>sum_konf:
+#                 print('Error!Выберете другой ход:')
+#                 b = sum_konf
+#                 sum_konf = sum_konf - b
+#                 print(b)
+#             else:
+#                 sum_konf = sum_konf - b
+#             print(f'Остаток конфет {sum_konf}')
+#
+#             if sum_konf == 0:
+#                 game_over = True
+#                 print('Победил игрок B!')
+#             else:
+#                 game_over = False
+#
+# if varion==2:
+#     game_over = False
+#     while game_over == False:
+#         print('Ходит второй игрок B')
+#         b = sum_konf % (28 + 1)
+#         print(b)
+#         if b > sum_konf:
+#             print('Error!Выберете другой ход:')
+#             b = random.randint(sum_konf)
+#             sum_konf = sum_konf - b
+#             print(b)
+#         else:
+#             sum_konf = sum_konf - b
+#         print(f'Остаток конфет {sum_konf}')
+#
+#         # !!!блок повторяется два раза
+#         if sum_konf == 0:
+#             game_over = True
+#             print('Победил игрок A!')
+#         else:
+#             game_over = False
+#
+#         while game_over == False:
+#             print('Ходит первый игрок А')
+#             print('Сколько конфет вы берете?')
+#             a = int(input())
+#             if a > sum_konf:
+#                 print('Error!Выберете другой ход')
+#             if 0 > a > 28:
+#                 print('Error!Выберете другой ход c 1 до 28!')
+#             else:
+#                 sum_konf = sum_konf - a
+#             print(f'Остаток конфет {sum_konf}')
+#
+#             if sum_konf == 0:
+#                 game_over = True
+#                 print('Победил игрок B!')
+#             else:
+#                 game_over = False
 #
 # 3.Создайте программу для игры в ""Крестики-нолики"".
 
