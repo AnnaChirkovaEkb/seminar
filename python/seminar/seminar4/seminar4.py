@@ -51,3 +51,11 @@ for i in range(1,len(g)):
     if g[i]>g[i-1]:
         t=t+1
 print(t)
+
+# запись файла
+f = open(fname,'w')
+while True:
+s = input()
+if s == '': break
+f.write(s+'\n')
+f.close()
