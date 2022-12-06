@@ -29,74 +29,99 @@
 # y=str(x)
 # print('\n',"|",1,'|',2,'|',3,'|','\n',"|",4,'|',5,'|',6,'|','\n',"|",7,'|',8,'|',9,'|','\n')
 #
-maps = [1, 2, 3,
-        4, 5, 6,
-        7, 8, 9]
+# maps = [1, 2, 3,
+#         4, 5, 6,
+#         7, 8, 9]
+#
+# # Инициализация победных линий
+# victories = [[0, 1, 2],
+#              [3, 4, 5],
+#              [6, 7, 8],
+#              [0, 3, 6],
+#              [1, 4, 7],
+#              [2, 5, 8],
+#              [0, 4, 8],
+#              [2, 4, 6]]
+#
+#
+# # Вывод карты на экран
+# def print_maps():
+#     print('|', maps[0], end="|")
+#     print(maps[1], end="|")
+#     print(maps[2], end="|\n")
+#
+#     print('|',maps[3], end="|")
+#     print(maps[4], end="|")
+#     print(maps[5], end="|\n")
+#
+#     print('|',maps[6], end="|")
+#     print(maps[7], end="|")
+#     print(maps[8], end="|\n")
+# print(print_maps())
+#
+# def result():
+#     win=''
+#     for i in victories:
+#         if  maps[i[0]] == "X" and maps[i[1]] == "X" and maps[i[2]] == "X":
+#             win = "X"
+#         if maps[i[0]] == "O" and maps[i[1]] == "O" and maps[i[2]] == "O":
+#             win = "O"
+#     return win
+#
+# game_over = False
+# while game_over == False:
+#     print('Ходит первый игрок Х')
+#     x=int(input())-1
+#     if x in range (0,9):
+#         if maps[x]=='X' and maps[x]=='O':
+#             print('Error!Выберете другой ход')
+#         else:
+#             maps[x] = 'X'
+#
+#     print(print_maps())
+#
+#     print('Ходит второй игрок O')
+#     y=int(input())
+#     if y in range(0,9):
+#         if maps[y] == 'X' and maps[y]=='O':
+#             print('Error!')
+#         else:
+#             maps[y] = 'O'
+#     print(print_maps())
+#
+#     win=result()
+#     if win !="":
+#         game_over = True
+#     else:
+#         game_over = False
+#
+# print_maps()
+# print(f'Победил, {result()}')
 
-# Инициализация победных линий
-victories = [[0, 1, 2],
-             [3, 4, 5],
-             [6, 7, 8],
-             [0, 3, 6],
-             [1, 4, 7],
-             [2, 5, 8],
-             [0, 4, 8],
-             [2, 4, 6]]
 
+# 4. Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
 
-# Вывод карты на экран
-def print_maps():
-    print('|', maps[0], end="|")
-    print(maps[1], end="|")
-    print(maps[2], end="|\n")
+with open('555.txt', 'r') as data:
+    st1 = data.readline()
+print(f"Текст {st1}")
 
-    print('|',maps[3], end="|")
-    print(maps[4], end="|")
-    print(maps[5], end="|\n")
+st2=''
+c = st1[0]
+count=1
+for i in range(1, len(st1)):
 
-    print('|',maps[6], end="|")
-    print(maps[7], end="|")
-    print(maps[8], end="|\n")
-print(print_maps())
+    if st1[i] == c:
+        count += 1
 
-def result():
-    win=''
-    for i in victories:
-        if  maps[i[0]] == "X" and maps[i[1]] == "X" and maps[i[2]] == "X":
-            win = "X"
-        if maps[i[0]] == "O" and maps[i[1]] == "O" and maps[i[2]] == "O":
-            win = "O"
-    return win
-
-game_over = False
-while game_over == False:
-    print('Ходит первый игрок Х')
-    x=int(input())-1
-    if x in range (0,9):
-        if maps[x]=='X' and maps[x]=='O':
-            print('Error!Выберете другой ход')
-        else:
-            maps[x] = 'X'
-
-    print(print_maps())
-
-    print('Ходит второй игрок O')
-    y=int(input())
-    if y in range(0,9):
-        if maps[y] == 'X' and maps[y]=='O':
-            print('Error!')
-        else:
-            maps[y] = 'O'
-    print(print_maps())
-
-    win=result()
-    if win !="":
-        game_over = True
     else:
-        game_over = False
+        st2 = st2 + str(count) + c+ " "
+        count=1
+        c = st1[i]
+    i+=1
+print(f'New rip:  {st2}')
 
-print_maps()
-print(f'Победил, {result()}')
-
-
-    # 4. Реализуйте RLE алгоритм: реализуйте модуль сжатия и восстановления данных.
+with open('rip555.txt', 'w') as data:
+    data.writelines(st2)
+with open('rip555.txt', 'r') as data:
+    st4=data.readlines()
+print(st4)

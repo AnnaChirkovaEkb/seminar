@@ -26,15 +26,28 @@
 # pi = round_pi(d)
 # print(f'С точностью {d=}, число {pi=}; ')
 
+# вариант2
+# import math
+# d = input('Введите число d указывающее степень округления числа pi ')
+# d = d[2:len(d)]
+# print(round(math.pi,len(d)))
+#
+# # вариант3
+# a = int(input('введите нужную точность 1#= '))
+#  pi_target = 0
+#  for i in range(1, 1000000):
+#      pi_target += 4 * ((-1) ** (i + 1)) / (2 * i - 1)
+#  print(str(pi_target)[:a + 2])
+
 
 # 2. Задайте натуральное число N. Напишите программу, которая составит список простых множителей числа N.
 
-def simple_number(n: int):
-    i = 2
-    while n % i != 0 or i == n - 1:
-        i += 1
-    if i == n:
-        return n
+# def simple_number(n: int):
+#     i = 2
+#     while n % i != 0 or i == n - 1:
+#         i += 1
+#     if i == n:
+#         return n
 
 # def simple_list(n: int) -> list:
 #     simple_list1 = [1]
@@ -50,6 +63,22 @@ def simple_number(n: int):
 # simple_list1 = simple_list(n)
 # print(f'Варианты:\n{simple_list1}')
 # print(simple_list1)
+
+# second variant
+#
+# n = int(input("Введите число N: "))
+# i = 2
+# list = []
+#
+# while i <= n:
+#     if n % i == 0:
+#         list.append(i)
+#         n //= i
+#         i = 2
+#     else:
+#         i += 1
+# print(f"Простые множители введенного числа указаны в списке: {list}")
+
 
 # 3. Задайте последовательность чисел. Напишите программу, которая выведет список неповторяющихся
 # элементов исходной последовательности.
@@ -81,6 +110,38 @@ def simple_number(n: int):
 # list = list1(source_list)
 # print(f'{source_list} ->')
 # print(list)
+
+# 2
+numbers = list(map(int, input("Введите числа через пробел:\n").split()))
+print(numbers)
+new_numbers = []
+
+for i in numbers:
+    if i not in new_numbers:
+        new_numbers.append(i)
+print(new_numbers)
+
+# 3
+def elements(nums):
+    nums = [int(i) for i in nums.split()]
+    return list(set(nums))
+
+numbers = '1 1 2 2 3 455 66 66 2 1'
+print(elements(numbers))
+a= [1,2,2,2,2,3,1,4]
+
+print(set(a))
+
+# 4
+b = [1, 1, 2, 3, 3, 4, 5]
+ a = []
+ for i in b:
+    if b.count(i) == 1:
+         a.append(i)
+
+ print(a)
+
+
 
 # 4. Задана натуральная степень k. Сформировать случайным образом список коэффициентов
 # (значения от 0 до 100)
@@ -133,6 +194,49 @@ def simple_number(n: int):
 # koe = create_mn(k)
 # write_file(create_str(koe))
 
+
+# 2
+from random import randint
+
+k = int(input('Insert equation power: '))
+koefs = list()
+for i in range(1, k + 2):
+    koefs.append(randint(1, 100))
+
+ans = list()
+for i in range(len(koefs)):
+    if k == 1:
+        ans.append(f'{koefs[i]}*x')
+    elif k == 0:
+        ans.append(f'{koefs[i]}')
+    else:
+        ans.append(f'{koefs[i]}*x**{k}')
+    flag = randint(0, 1)
+    if flag == 1:
+        ans.append('+')
+    elif flag == 0:
+        ans.append('-')
+    k -= 1
+
+ans.pop(-1)
+ans.append('=0')
+fout = open('output.txt', 'w')
+fout.write(''.join(ans))
+fout.close()
+
+# 3
+import random
+from numpy.polynomial import Polynomial as P
+
+p = P([0, 0, -2,])
+
+print(p)
+
+k = random.randint(1, 4)
+print(k)
+poly = p ** k
+print(poly)
+
 # 5. Даны два файла, в каждом из которых находится запись многочлена. Задача - сформировать файл,
 # содержащий сумму многочленов.
 
@@ -154,3 +258,79 @@ with open('num5_3.txt', 'w') as data:
 with open('num5_3.txt', 'r') as data:
     st4 = data.readlines()
 print(f"Результирующий многочлен {st4}")
+
+
+import random
+def nmnogochlen1(a=random.randint(1, 100), b=random.randint(0, 100), c=random.randint(0, 100), res='') -> str:
+    if b > 0:
+        res += '+' + str(b) + '*x'
+    if c > 0:
+        res += '+' + str(c)
+    return f'{a}*x^2' + res
+рандом в функции
+
+# import random
+# def x(b=None):
+#     if b is None:
+#         b = random.randint(1, 10)
+#
+#     a=b+1
+#     print(a)
+# x_random1=x()
+# x_random2=x()
+
+
+def nmnogochlen2(a=random.randint(1, 100), b=random.randint(0, 100), c=random.randint(0, 100), res='') -> str:
+    if b > 0:
+        res += '+' + str(b) + '*x'
+    if c > 0:
+        res += '+' + str(c)
+    return f'{a}*x^2' + res
+
+
+# 2
+f = open('dz40.txt', 'w')
+f.write(nmnogochlen1())
+f = open('dz40.txt', 'r')
+list_5 = str(f.readline()).split('x')
+c1 = b1 = a1 = 0
+if len(list_5) == 3:
+    c1 = list_5[2][1:]
+if len(list_5) >= 2:
+    b1 = list_5[1][3:-1]
+a1 = list_5[0][:-1]
+f.close()
+
+f = open('dz41.txt', 'r')
+list_51 = str(f.readline()).split('x')
+c2 = b2 = a2 = 0
+if len(list_51) == 3:
+    c2 = list_51[2][1:]
+if len(list_51) >= 2:
+    b2 = list_51[1][3:-1]
+a2 = list_51[0][:-1]
+f.close()
+
+f = open('dz42.txt', 'w')
+f.write(nmnogochlen1(int(a1) + int(a2), int(b1) + int(b2), int(c1) + int(c2)))
+print(nmnogochlen1(int(a1) + int(a2), int(b1) + int(b2), int(c1) + int(c2)))
+f.close()
+
+# 3
+# ffile1 = open('file1.txt', 'r')
+# ffile2 = open('file2.txt', 'r')
+# ffile3 = open('file3.txt', 'w')
+# file1 = ffile1.readline()
+# file2 = ffile2.readline()
+# for i in range(len(file1)):
+#     if file1[i-1] != '^':
+#         if file1[i].isnumeric():
+#             ffile3.write(str(int(file1[i])+int(file2[i])))
+#         else:
+#             ffile3.write(str(file1[i]))
+#     else:
+#         ffile3.write(str(file1[i]))
+# ffile1.close
+# ffile2.close
+# ffile3.close
+
