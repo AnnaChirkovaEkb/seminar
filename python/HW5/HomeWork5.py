@@ -1,12 +1,26 @@
 # 1. Напишите программу, удаляющую из текста все слова, содержащие ""абв"".
 import random
-
+# вариант от преподавателя
 # with open('text.txt', 'r', encoding = 'utf_8') as data:
 # stroka = data.read().split()
 # print(f'В файле записано: {stroka}')
 # print('Удалили все слова с абв и получили: ')
 # print(' '.join([word for word in stroka if 'абв' not in word]))
 # print()
+
+# вариант2
+# text = 'ываабв лповап абвцукв алоабвабв ываываыв'
+# print('Исходный текст: ', text)
+# text_new= text.split()
+# find = 'абв'
+# new_text = []
+#
+# for i in text_new:
+#     if find not in i:
+#         new_text.append(i)
+#
+# text_2 = ' '.join(new_text)
+# print('Полученный текст: ', text_2)
 
 # 2. Создайте программу для игры с конфетами человек против человека.
 #
