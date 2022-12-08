@@ -14,20 +14,21 @@
 # - пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
 
-from math import factorial
-num = int(input('Введите число: '))
-print(num)
-
-print(f'Factorial number {list(map(lambda x: ((x == 1) and 1) or x * factorial(x -1),list(range(1,num+1))))}')
-# print(f"Factorial number от 1 до {num} is {f}")
+# from math import factorial
+# num = int(input('Введите число: '))
+# print(num)
+#
+# print(f'Factorial number {list(map(lambda x: ((x == 1) and 1) or x * factorial(x -1),list(range(1,num+1))))}')
+# # print(f"Factorial number от 1 до {num} is {f}")
 
 # 1.  Напишите программу, которая принимает на вход вещественное число и показывает сумму его цифр.
 # Пример:
 # - 6782 -> 23
 # - 0,56 -> 11
-# n = input('Введите вещественное число: ')
-# sum = sum(map(int, n.replace('.', '')))
-# print (sum)
+
+n = input('Введите вещественное число: ')
+sum = sum(map(int, n.replace('.', '')))
+print (sum)
 
 # 5. Напишите программу, которая принимает на вход координаты двух точек и находит расстояние
 # между ними в 2D пространстве.
